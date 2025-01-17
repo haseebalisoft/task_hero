@@ -1,5 +1,6 @@
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/auth/signup/signup_page.dart';
+import 'package:cocoon/view/forgot_and_reset_password/reset_password_screen.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -68,9 +69,14 @@ class LoginPage extends StatelessWidget with Validators {
                     elevation: 5,
                     //onPressed: controller.onSingUp,
                   ),
-                  20.h,
-                  Text('Forgot the password?',style: context.bodyLarge!.copyWith(color: context.primary,fontWeight: FontWeight.bold),),
-                  20.h,
+                  14.h,
+                  InkWell(
+                    onTap: ()=>Get.to(()=>ResetPasswordScreen()),
+                    child: Padding(
+                      padding: EdgeInsets.all(8),
+                        child: Text('Forgot the password?',style: context.bodyLarge!.copyWith(color: context.primary,fontWeight: FontWeight.bold),)),
+                  ),
+                  14.h,
 
                   Row(
                     children: [

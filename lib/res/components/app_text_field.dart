@@ -74,7 +74,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 Text(
                   widget.title ?? '',
                   style: context.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.w500,
+                    fontWeight:FontWeight.bold,
                     color: context.onSecondary
                   ),
                 ),
@@ -147,7 +147,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       )
                     : null,
             hintText: widget.hintText,
-            hintStyle: context.bodyLarge!.copyWith(color: context.lightGrey),
+            hintStyle: context.bodyLarge!.copyWith(color: widget.hintTextColor?? context.lightGrey),
             fillColor: widget.fillColor??Color(0xffFAFAFA),
             filled: true,
             contentPadding: //EdgeInsets.zero,

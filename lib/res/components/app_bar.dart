@@ -16,6 +16,7 @@ class SimpleAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title,
     this.backgroundColor,
   });
+
    final bool? showBackButton;
   final String? title;
   final Color? backgroundColor;
@@ -40,7 +41,7 @@ class SimpleAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: context.titleMedium!.copyWith(fontWeight: FontWeight.bold,fontSize: 20),
             )
           : null,
-      centerTitle: true,
+      centerTitle: false,
     );
   }
 

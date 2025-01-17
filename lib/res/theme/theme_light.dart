@@ -14,19 +14,32 @@ class ThemeLight extends AppTheme {
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         cardColor: cardColor,
         checkboxTheme: CheckboxThemeData(
-          side: BorderSide(width: 2.5,color: primary),
-
+          side: BorderSide(width: 2.5, color: primary),
         ),
         appBarTheme: const AppBarTheme(centerTitle: true),
         textTheme: TextTheme(
-          titleSmall: TextStyle(color:Color(0xff212121) ,fontSize: 22,fontWeight: FontWeight.w600),
-          titleMedium: TextStyle(color:Color(0xff212121)  ,fontSize: 29,fontWeight: FontWeight.w700),
-          titleLarge: TextStyle(color:Color(0xff212121) ,fontSize: 40,fontWeight: FontWeight.w700),
-          headlineMedium: TextStyle(color:Color(0xff212121) ,fontSize: 14,fontWeight: FontWeight.w600),
-          bodyMedium: TextStyle(color:Color(0xff212121) ,fontSize: 11),
-          bodySmall: TextStyle(color:Color(0xff212121)  ,fontSize: 13,fontWeight: FontWeight.w400),
-          bodyLarge: TextStyle(color:Color(0xff212121)  ,fontSize: 14),
-
+          titleSmall: TextStyle(
+              color: Color(0xff212121),
+              fontSize: 22,
+              fontWeight: FontWeight.w600),
+          titleMedium: TextStyle(
+              color: Color(0xff212121),
+              fontSize: 29,
+              fontWeight: FontWeight.w700),
+          titleLarge: TextStyle(
+              color: Color(0xff212121),
+              fontSize: 40,
+              fontWeight: FontWeight.w700),
+          headlineMedium: TextStyle(
+              color: Color(0xff212121),
+              fontSize: 14,
+              fontWeight: FontWeight.w600),
+          bodyMedium: TextStyle(color: Color(0xff212121), fontSize: 11),
+          bodySmall: TextStyle(
+              color: Color(0xff212121),
+              fontSize: 13,
+              fontWeight: FontWeight.w400),
+          bodyLarge: TextStyle(color: Color(0xff212121), fontSize: 14),
         ),
 
         // fontFamily: FontFamily.poppins,
@@ -37,7 +50,10 @@ class ThemeLight extends AppTheme {
           onSecondary: onSecondary,
           error: errorColor,
         ),
+        radioTheme: RadioThemeData(
+          overlayColor: WidgetStateProperty.all(errorColor),
 
+        ),
         inputDecorationTheme: inputDecorationTheme,
         progressIndicatorTheme: const ProgressIndicatorThemeData(),
       );
@@ -52,7 +68,7 @@ class ThemeLight extends AppTheme {
   Color get onPrimary => const Color(0xFFFFFFFF);
 
   @override
-  Color get secondary => const Color(0xFFcde9d4);
+  Color get secondary => const Color(0xFFD3E1FF);
 
   @override
   Color get onSecondary => const Color(0xFF344054);
@@ -64,9 +80,7 @@ class ThemeLight extends AppTheme {
   Color get errorColor => Colors.red;
 
   @override
-  TextTheme get textTheme => const TextTheme(
-
-  );
+  TextTheme get textTheme => const TextTheme();
 
   @override
   AppThemeExtension get extension => AppThemeExtension(
@@ -136,7 +150,7 @@ class ThemeLight extends AppTheme {
       );
 
   @override
-  Color get cardColor => const Color(0xffffffff);
+  Color get cardColor => const Color(0xffFAFAFA);
 
   @override
   Color get grey => const Color(0xff98A2B3);

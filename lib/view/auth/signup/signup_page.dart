@@ -1,4 +1,5 @@
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/add_profile_details/add_profile_details_view.dart';
 import 'package:cocoon/view/auth/login/login.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
 import 'package:flutter/material.dart';
@@ -72,9 +73,10 @@ class SignupPage extends StatelessWidget with Validators {
                   20.h,
 
                   AppButton.primary(
+
                     title: "Sign up",
                     elevation: 5,
-                    //onPressed: controller.onSingUp,
+                    onPressed: ()=>Get.to(()=>AddProfileDetailsView()),
                   ),
                   30.h,
                   Row(
