@@ -2,10 +2,9 @@ import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/proposing_your_offer_screen.dart';
 import 'package:cocoon/view/home/widgets/user_card.dart';
-import 'package:flutter/material.dart';
 
 class OfferScreen extends StatelessWidget {
-  const OfferScreen({Key? key}) : super(key: key);
+  const OfferScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class OfferScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            UserCard(),
+            const UserCard(),
             const SizedBox(height: 16),
             Container(
               padding: const EdgeInsets.all(16.0),

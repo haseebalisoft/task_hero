@@ -1,8 +1,6 @@
 
-import 'package:cocoon/view/home/home_view.dart';
 import 'package:cocoon/view/user_verification/widgets/custom_dialog.dart';
 
-import '../../utils/mixins/local_storage_mixin.dart';
 import 'package:cocoon/res/constants/imports.dart';
 
 import '../../widgets/custom_drop_down.dart';
@@ -54,7 +52,7 @@ class GetInfoController extends GetxController with LocalStorageMixin {
               description:
               "Your profile is set up.You will be redirected to the Home page or add your service(s)",
               onTap: () {
-                    Get.to(()=>CreateNewPinScreen());
+                    Get.to(()=>const CreateNewPinScreen());
               },
             );
           },

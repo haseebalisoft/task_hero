@@ -3,7 +3,6 @@ import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/widgets/detail_task_card.dart';
 import 'package:cocoon/view/home/widgets/level_card.dart';
 import 'package:cocoon/view/home/widgets/user_card.dart';
-import 'package:flutter/material.dart';
 
 class TaskDetailScreen extends StatelessWidget {
   const TaskDetailScreen({super.key});
@@ -23,10 +22,10 @@ class TaskDetailScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            UserCard(),
+            const UserCard(),
             15.h,
             DetailTaskCard(
               title: "Shoe Repair",
@@ -38,7 +37,7 @@ class TaskDetailScreen extends StatelessWidget {
               bgColor: Colors.white,
             ),
             20.h,
-            LevelCard(),
+            const LevelCard(),
           ],
         ),
       ),

@@ -2,11 +2,6 @@ import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/add_profile_details/add_profile_details_view.dart';
 import 'package:cocoon/view/auth/login/login.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
-import '../../../gen/assets.gen.dart';
-import '../../../res/components/app_bar.dart';
-import '../../../utils/mixins/validators.dart';
 import '../../../widgets/custom_rich_text.dart';
 
 class SignupPage extends StatelessWidget with Validators {
@@ -18,7 +13,7 @@ class SignupPage extends StatelessWidget with Validators {
       init: SignUpViewModel(),
       builder: (controller) {
         return Scaffold(
-          appBar: SimpleAppBar(),
+          appBar: const SimpleAppBar(),
           body: SingleChildScrollView(
             child: Form(
               //  key: controller.formKey,
@@ -76,7 +71,7 @@ class SignupPage extends StatelessWidget with Validators {
 
                     title: "Sign up",
                     elevation: 5,
-                    onPressed: ()=>Get.to(()=>AddProfileDetailsView()),
+                    onPressed: ()=>Get.to(()=>const AddProfileDetailsView()),
                   ),
                   30.h,
                   Row(
@@ -126,7 +121,7 @@ class SignupPage extends StatelessWidget with Validators {
                   CustomRichText(
                     text: 'Already have an account?',
                     highlightedText: 'Sign in',
-                    onTap: ()=>Get.to(()=>LoginPage()),
+                    onTap: ()=>Get.to(()=>const LoginPage()),
                   ),
                   20.h,
                 ],

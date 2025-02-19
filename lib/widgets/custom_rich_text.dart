@@ -4,7 +4,13 @@ import '../res/constants/imports.dart';
 
 class CustomRichText extends StatelessWidget {
   const CustomRichText(
-      {super.key, this.text, this.highlightedText, this.fontSize, this.onTap,  this.textColor,  this.highlightedTextColor});
+      {super.key,
+      this.text,
+      this.highlightedText,
+      this.fontSize,
+      this.onTap,
+      this.textColor,
+      this.highlightedTextColor});
   final String? text, highlightedText;
   final double? fontSize;
   final VoidCallback? onTap;
@@ -16,22 +22,17 @@ class CustomRichText extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: text,
-
         style: context.bodySmall
-            ?.copyWith( fontSize: fontSize,color:textColor?? context.grey),
+            ?.copyWith(fontSize: fontSize, color: textColor ?? context.grey),
         children: <TextSpan>[
           if (highlightedText != null)
             TextSpan(
-
               text: " ${highlightedText ?? ''} ",
-
               style: context.bodyLarge?.copyWith(
-                color: highlightedTextColor??context.primary,
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-
-                decorationColor: context.primary
-              ),
+                  color: highlightedTextColor ?? context.primary,
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
+                  decorationColor: context.primary),
               recognizer: onTap == null
                   ? null
                   : (TapGestureRecognizer()..onTap = () => onTap!()),

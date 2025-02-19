@@ -2,11 +2,6 @@ import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/auth/signup/signup_page.dart';
 import 'package:cocoon/view/forgot_and_reset_password/reset_password_screen.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
-import '../../../gen/assets.gen.dart';
-import '../../../res/components/app_bar.dart';
-import '../../../utils/mixins/validators.dart';
 import '../../../widgets/custom_rich_text.dart';
 
 class LoginPage extends StatelessWidget with Validators {
@@ -18,7 +13,7 @@ class LoginPage extends StatelessWidget with Validators {
       init: SignUpViewModel(),
       builder: (controller) {
         return Scaffold(
-          appBar: SimpleAppBar(),
+          appBar: const SimpleAppBar(),
           body: SingleChildScrollView(
             child: Form(
               //  key: controller.formKey,
@@ -71,9 +66,9 @@ class LoginPage extends StatelessWidget with Validators {
                   ),
                   14.h,
                   InkWell(
-                    onTap: ()=>Get.to(()=>ResetPasswordScreen()),
+                    onTap: ()=>Get.to(()=>const ResetPasswordScreen()),
                     child: Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                         child: Text('Forgot the password?',style: context.bodyLarge!.copyWith(color: context.primary,fontWeight: FontWeight.bold),)),
                   ),
                   14.h,
@@ -124,7 +119,7 @@ class LoginPage extends StatelessWidget with Validators {
                   CustomRichText(
                     text: 'Don’t have an account?',
                     highlightedText: 'Sign up',
-                    onTap: ()=>Get.to(()=>SignupPage()),
+                    onTap: ()=>Get.to(()=>const SignupPage()),
                   ),
                   20.h,
                 ],

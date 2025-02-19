@@ -1,12 +1,6 @@
-import 'package:cocoon/main.dart';
 import 'package:cocoon/res/constants/imports.dart';
-import 'package:cocoon/view/home/scheduled_task_screen.dart';
 import 'package:cocoon/widgets/custom_drop_down.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import '../../res/components/sb.dart';
-import '../../widgets/custom_radio_button.dart';
 import 'get_info_controller.dart';
 
 class GetInfoOptionWidget extends StatelessWidget {
@@ -14,8 +8,8 @@ class GetInfoOptionWidget extends StatelessWidget {
 
   const GetInfoOptionWidget({
     required this.controller,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +24,7 @@ class GetInfoOptionWidget extends StatelessWidget {
           Text('(Private)',style: context.bodySmall,),
           20.h,
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: context.secondary,
               borderRadius: BorderRadius.circular(10)
@@ -46,7 +40,7 @@ class GetInfoOptionWidget extends StatelessWidget {
           14.h,
 
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: context.primary,
               borderRadius: BorderRadius.circular(10)
@@ -76,33 +70,33 @@ class GetInfoOptionWidget extends StatelessWidget {
               value: 'Businessman',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Businessman')),
+              child: const Text('Businessman')),
           RadioMenuButton(
               value: 'Student',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Student')),
+              child: const Text('Student')),
           RadioMenuButton(
               value: 'Freelancer',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Freelancer')),
+              child: const Text('Freelancer')),
           RadioMenuButton(
               value: 'Employer',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Employer')),
+              child: const Text('Employer')),
           RadioMenuButton(
               value: 'Agent (Serve external clients)',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Agent (Serve external clients)')),
+              child: const Text('Agent (Serve external clients)')),
           RadioMenuButton(
               value: 'Other',
               groupValue: controller.selectedValueDescribeYou,
               onChanged: (v) => controller.setSelectValueDescribeYou(v!),
-              child: Text('Other')),
-          SizedBox(
+              child: const Text('Other')),
+          const SizedBox(
             height: 30,
           ),
           Text(
@@ -113,18 +107,18 @@ class GetInfoOptionWidget extends StatelessWidget {
               value: 'Male',
               groupValue: controller.selectedValueGender,
               onChanged: (v) => controller.setSelectValueGender(v!),
-              child: Text('Male')),
+              child: const Text('Male')),
           RadioMenuButton(
               value: 'Female',
               groupValue: controller.selectedValueGender,
               onChanged: (v) => controller.setSelectValueGender(v!),
-              child: Text('Female')),
+              child: const Text('Female')),
           RadioMenuButton(
               value: 'Prefer not to say',
               groupValue: controller.selectedValueGender,
               onChanged: (v) => controller.setSelectValueGender(v!),
-              child: Text('Prefer not to say')),
-          SizedBox(
+              child: const Text('Prefer not to say')),
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -141,7 +135,7 @@ class GetInfoOptionWidget extends StatelessWidget {
               )),
             ],
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           CustomDropDown(
             items: [
               DropDownItemModel(name: 'Food & Restaurants'),

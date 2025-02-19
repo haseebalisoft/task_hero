@@ -26,7 +26,7 @@ class OtpCodeVerificationScreenn extends StatelessWidget {
       textStyle: const TextStyle(fontSize: 31),
       decoration: BoxDecoration(
         color: const Color(0xFFEEF4FF),
-        border: Border.all(color: const Color(0xFF007AFF)),
+        border: Border.all(color:AppColors.purple),
         borderRadius: BorderRadius.circular(16),
       ),
     );
@@ -85,7 +85,7 @@ class OtpCodeVerificationScreenn extends StatelessWidget {
                     text: "55 ",
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      color: AppColors.p1,
+                      color: AppColors.purple,
                       fontSize: 18,
                     ),
                   ),
@@ -111,7 +111,7 @@ class OtpCodeVerificationScreenn extends StatelessWidget {
                   },
                   title: "Verify",
                   elevation: 0,
-                  background: AppColors.p1,
+                  background: AppColors.purple,
                   textColor: Colors.white,
                 ),
               ],

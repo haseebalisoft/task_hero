@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -9,7 +8,8 @@ class PermissionHandler {
   static Future<bool> permission({required Permission permission}) async {
     PermissionStatus permissionStatus = await permission.status;
     print(permissionStatus);
-    if (permissionStatus == PermissionStatus.granted || permissionStatus ==PermissionStatus.limited) return true;
+    if (permissionStatus == PermissionStatus.granted ||
+        permissionStatus == PermissionStatus.limited) return true;
 
     if (permissionStatus == PermissionStatus.denied) {
       permissionStatus = await permission.request();

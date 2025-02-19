@@ -3,7 +3,6 @@ export 'package:flutter/material.dart';
 export '../constants/app_strings.dart';
 export '../components/sb.dart';
  export 'package:cocoon/gen/assets.gen.dart';
-import 'package:cocoon/utils/extensions/size_extension.dart';
 
 export '../components/app_button.dart';
 export '../components/app_bar.dart';

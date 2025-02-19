@@ -1,7 +1,5 @@
-import 'package:cocoon/view/auth/login/login.dart';
-import 'package:cocoon/view/auth/signup/signup_page.dart';
 import 'package:cocoon/view/get_started/get_started_view.dart';
-
+import 'package:cocoon/res/constants/app_colors.dart';
 import '../../../res/constants/imports.dart';
 import '../../view_models/models/welcome_view_model/welcome_view_model.dart';
 
@@ -32,14 +30,14 @@ class WelcomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
 
-            AppButton.primary(title: 'Next',background: context.onPrimary,textColor: context.primary,onPressed: ()=>Get.to(()=>GetStartedView()),).paddingSymmetric(horizontal: 30),
+            AppButton.primary(title: 'Next',background:Colors.white,foregroundColor: AppColors.purple ,onPressed: ()=>Get.to(()=>const GetStartedView()),).paddingSymmetric(horizontal: 30),
             29.h,
             Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: controller.onBoardData.asMap().entries.map<Widget>(
                       (e) {
                     return Container(
-                      margin: EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(5),
                       height: 10,
                       width:controller.pageViewIndex==e.key?30: 12,
                       decoration: BoxDecoration(

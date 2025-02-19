@@ -2,7 +2,6 @@ import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/task_detail_screen.dart';
 import 'package:cocoon/view/home/widgets/task_card.dart';
-import 'package:flutter/material.dart';
 
 class RequestScreen extends StatefulWidget {
   const RequestScreen({super.key});
@@ -50,7 +49,7 @@ class _RequestScreenState extends State<RequestScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: isShow
             ? Column(
                 children: [

@@ -1,7 +1,6 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/user_verification/set_your_fingerprint.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pinput/pinput.dart';
 
 class CreateNewPinScreen extends StatelessWidget {
@@ -28,7 +27,7 @@ class CreateNewPinScreen extends StatelessWidget {
       textStyle: const TextStyle(fontSize: 31),
       decoration: BoxDecoration(
         color: const Color(0xFFEEF4FF),
-        border: Border.all(color: const Color(0xFF007AFF)),
+        border: Border.all(color: AppColors.purple),
         borderRadius: BorderRadius.circular(16),
       ),
     );
@@ -75,15 +74,15 @@ class CreateNewPinScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                AppButton.primary(
+               /* AppButton.primary(
                   width: 135,
                   title: "Skip",
                   elevation: 0,
                   background: const Color(0xFFEFF6FF),
-                  textColor: AppColors.p1,
-                ),
+                  foregroundColor: AppColors.purple,
+                ),*/
                 AppButton.primary(
-                  width: 135,
+                  //width: 180,
                   title: "Continue",
                   onPressed: () {
                     Get.to(() => const SetYourFingerprint());

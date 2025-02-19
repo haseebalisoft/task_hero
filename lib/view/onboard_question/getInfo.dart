@@ -1,11 +1,8 @@
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/onboard_question/original_documents.dart';
 import 'package:cocoon/view/onboard_question/skill_and_education.dart';
-import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../../res/components/sb.dart';
-import '../../widgets/custom_drop_down.dart';
 import 'get_info_controller.dart';
 import 'get_info_option_widget.dart';
 
@@ -19,7 +16,7 @@ class GetInfoPage extends StatelessWidget {
       init: GetInfoController(forEdit: forEdit),
       builder: (controller) {
         return Scaffold(
-          appBar:SimpleAppBar(title: 'Profile Setup',) ,
+          appBar:const SimpleAppBar(title: 'Profile Setup',) ,
           body: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -27,7 +24,7 @@ class GetInfoPage extends StatelessWidget {
                 children: [
                   Center(
                     child: LinearPercentIndicator(
-                      barRadius: Radius.circular(10),
+                      barRadius: const Radius.circular(10),
                       width: context.width-40,
                       lineHeight: 16.0,
                       percent: controller.getInfoProgress,
@@ -38,14 +35,14 @@ class GetInfoPage extends StatelessWidget {
                   30.h,
                   Expanded(
                       child: PageView(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         controller: controller.pageViewController,
                         //onPageChanged: _handlePageViewChanged,
                         children: [
                           GetInfoOptionWidget(
                               controller: controller),
-                          SkillAndEducationView(),
-                          OriginalDocumentsView()
+                          const SkillAndEducationView(),
+                          const OriginalDocumentsView()
 
                         ],
                       )),
@@ -56,7 +53,7 @@ class GetInfoPage extends StatelessWidget {
 
 
           bottomNavigationBar:  Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Row(
               children: [
                 Expanded(
@@ -69,7 +66,7 @@ class GetInfoPage extends StatelessWidget {
                     textColor: context.primary,
                   ),
                 ),
-                SizedBox(width: 15,),
+                const SizedBox(width: 15,),
                 Expanded(child: AppButton.primary(title: 'Next',onPressed: controller.incrementPageViewIndex,))
               ],
             ),

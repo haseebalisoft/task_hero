@@ -1,9 +1,8 @@
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/offer_screen.dart';
-import 'package:flutter/material.dart';
 
 class OffersBottomSheet extends StatelessWidget {
-  const OffersBottomSheet({Key? key}) : super(key: key);
+  const OffersBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {

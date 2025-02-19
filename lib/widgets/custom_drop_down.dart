@@ -31,9 +31,12 @@ class CustomDropDown extends StatelessWidget {
             isExpanded: true,
             hint: Text(
               hint,
+               textAlign: TextAlign.start,
               style: TextStyle(
                 fontSize: 14,
                 color: context.grey,
+                
+                
               ),
             ),
             items: items
@@ -41,9 +44,9 @@ class CustomDropDown extends StatelessWidget {
               value: item,
               child: Text(
                 item.name,
-                style:  TextStyle(
+                style:  const TextStyle(
                   fontSize: 14,
-                  color:textColor?? context.onPrimary
+                  color:Color.fromARGB(134, 0, 0, 0)
                 ),
               ),
             ))
@@ -53,17 +56,17 @@ class CustomDropDown extends StatelessWidget {
             onChanged: onChange,
 
             buttonStyleData:  ButtonStyleData(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 height: 45,
                 decoration: BoxDecoration(
     color:context.cardColor,
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: Colors.transparent,
+                      color: const Color.fromARGB(0, 0, 0, 0),
                     )
                 )
             ),
-            iconStyleData: IconStyleData(icon: Icon(Icons.arrow_drop_down,color: Colors.black,)),
+            iconStyleData: const IconStyleData(icon: Icon(Icons.arrow_drop_down,color: Colors.black,)),
             dropdownStyleData:DropdownStyleData(
               decoration: BoxDecoration(
                 color:backgroundColor?? context.cardColor
@@ -72,6 +75,7 @@ class CustomDropDown extends StatelessWidget {
             ),
             menuItemStyleData: const MenuItemStyleData(
               height: 40,
+             
             ),
 
             // dropdownSearchData: DropdownSearchData(

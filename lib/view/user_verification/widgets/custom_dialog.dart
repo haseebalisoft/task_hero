@@ -1,6 +1,5 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
-import 'package:flutter/material.dart';
 
 class CustomDialog extends StatelessWidget {
   final String title;
@@ -8,11 +7,11 @@ class CustomDialog extends StatelessWidget {
   final VoidCallback onTap;
 
   const CustomDialog({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

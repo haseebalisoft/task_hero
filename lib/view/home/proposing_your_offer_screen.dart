@@ -1,9 +1,7 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/widgets/done_dialog.dart';
-import 'package:cocoon/view/home/widgets/offer_bottom_sheet.dart';
 import 'package:cocoon/view/home/widgets/purpose_bottom_sheet.dart';
-import 'package:flutter/material.dart';
 
 class ProposingYourOfferScreen extends StatelessWidget {
   const ProposingYourOfferScreen({super.key});
@@ -54,7 +52,7 @@ class ProposingYourOfferScreen extends StatelessWidget {
               maxLines: 5,
               hintText: "Placeholder",
             ),
-            Spacer(),
+            const Spacer(),
             Align(
               alignment: Alignment.center,
               child: AppButton.primary(
