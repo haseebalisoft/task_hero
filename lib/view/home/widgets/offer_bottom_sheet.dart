@@ -133,16 +133,16 @@ class OfferTile extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
+                    style:  TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     subtitle,
-                    style: const TextStyle(
+                    style:  TextStyle(
                       fontSize: 14,
-                      color: Colors.blue,
+                      color: context.primary,
                     ),
                   ),
                 ],

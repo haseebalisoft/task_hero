@@ -62,7 +62,7 @@ class ThemeLight extends AppTheme {
   MaterialColor get primarySwatch => createMaterialColor(primary);
 
   @override
-  Color get primary => const Color(0xff007AFF);
+  Color get primary => const Color(0xff642D91);
 
   @override
   Color get onPrimary => const Color(0xFFFFFFFF);

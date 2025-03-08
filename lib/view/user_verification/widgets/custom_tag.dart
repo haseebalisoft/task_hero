@@ -29,12 +29,14 @@ class CustomTag extends StatelessWidget {
             size: 18,
           ),
           const SizedBox(width: 8),
-          Text(
-            text,
-            style: TextStyle(
-              color: color,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(
+                color: color,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],

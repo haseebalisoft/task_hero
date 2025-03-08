@@ -1,5 +1,7 @@
 import 'package:cocoon/res/constants/app_colors.dart';
+import 'package:cocoon/res/constants/imports.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LevelCard extends StatelessWidget {
   const LevelCard({super.key});
@@ -72,29 +74,61 @@ class LevelCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8.0),
-          // Row(
-          //   children: [
-          //     const Text(
-          //       "• Type                     Apartment",
-          //       style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-          //     ),
-          //   ],
-          // ),
-          // const SizedBox(height: 8.0),
-          // const Text(
-          //   "• Rooms                 2",
-          //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-          // ),
-          // const SizedBox(height: 8.0),
-          // const Text(
-          //   "• Bathrooms          1",
-          //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-          // ),
-          // const SizedBox(height: 8.0),
-          // const Text(
-          //   "• Delivery time      1 day",
-          //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-          // ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "•   Type",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                "Apartment",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8.0),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "•   Rooms",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                "2",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8.0),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "•   Bathrooms",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                "1",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8.0),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "•   Delivery time",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                "1 day",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
         ],
       ),
     );

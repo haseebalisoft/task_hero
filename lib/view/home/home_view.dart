@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:cocoon/res/constants/app_colors.dart';
+import 'package:cocoon/view/home/my_service_screen.dart';
 import 'package:cocoon/view/home/scheduled_task_screen.dart';
 import 'package:cocoon/view/home/task_screen.dart';
 import 'package:cocoon/view/home/widgets/home_card_horizontal.dart';
@@ -9,6 +10,7 @@ import 'package:cocoon/view/home/widgets/task_card.dart';
 import 'package:cocoon/view/home/widgets/user_title_card.dart';
 
 import '../../res/constants/imports.dart';
+import '../new_module/track_order/track_order_screen.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -38,10 +40,15 @@ class _HomeViewState extends State<HomeView> {
           padding: const EdgeInsets.all(14.0),
           child: Column(
             children: [
-              const UserTitleCard(
-                userName: "John Doe",
-                userRole: "Food Hero",
-                profileImageUrl: "assets/images/user.png",
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => const TrackOrderScreen());
+                },
+                child: const UserTitleCard(
+                  userName: "John Doe",
+                  userRole: "Food Hero",
+                  profileImageUrl: "assets/images/user.png",
+                ),
               ),
               20.h,
               Row(children: [
@@ -65,7 +72,9 @@ class _HomeViewState extends State<HomeView> {
                     t2: "4",
                     t1Color: AppColors.p1,
                     t2Color: AppColors.p1,
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const MyServiceScreen());
+                    },
                   ),
                 ),
               ]),

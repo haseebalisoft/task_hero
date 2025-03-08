@@ -1,6 +1,7 @@
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/auth/signup/signup_page.dart';
 import 'package:cocoon/view/forgot_and_reset_password/reset_password_screen.dart';
+import 'package:cocoon/view/main_activity.dart';
 import 'package:cocoon/view_models/models/welcome_view_model/signup_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -48,13 +49,11 @@ class LoginPage extends StatelessWidget with Validators {
                     isPasswordField: true,
                     //controller: controller.tfPassword,
                   ),
-
                   20.h,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Checkbox(
-                          value: false, onChanged: (v) {}),
+                      Checkbox(value: false, onChanged: (v) {}),
                       7.w,
                       Text(
                         'Remember me',
@@ -63,27 +62,33 @@ class LoginPage extends StatelessWidget with Validators {
                     ],
                   ),
                   20.h,
-
                   AppButton.primary(
                     title: "Sign in",
                     elevation: 5,
+                    onPressed: () {
+                      Get.to(() => MainActivity());
+                    },
                     //onPressed: controller.onSingUp,
                   ),
                   14.h,
                   InkWell(
-                    onTap: ()=>Get.to(()=>ResetPasswordScreen()),
+                    onTap: () => Get.to(() => ResetPasswordScreen()),
                     child: Padding(
-                      padding: EdgeInsets.all(8),
-                        child: Text('Forgot the password?',style: context.bodyLarge!.copyWith(color: context.primary,fontWeight: FontWeight.bold),)),
+                        padding: EdgeInsets.all(8),
+                        child: Text(
+                          'Forgot the password?',
+                          style: context.bodyLarge!.copyWith(
+                              color: context.primary,
+                              fontWeight: FontWeight.bold),
+                        )),
                   ),
                   14.h,
-
                   Row(
                     children: [
                       Expanded(
                           child: Divider(
-                            color: context.extraLightGrey,
-                          )),
+                        color: context.extraLightGrey,
+                      )),
                       10.w,
                       Text(
                         'or continue with',
@@ -92,8 +97,8 @@ class LoginPage extends StatelessWidget with Validators {
                       10.w,
                       Expanded(
                           child: Divider(
-                            color: context.extraLightGrey,
-                          ))
+                        color: context.extraLightGrey,
+                      ))
                     ],
                   ),
                   20.h,
@@ -124,7 +129,7 @@ class LoginPage extends StatelessWidget with Validators {
                   CustomRichText(
                     text: 'Don’t have an account?',
                     highlightedText: 'Sign up',
-                    onTap: ()=>Get.to(()=>SignupPage()),
+                    onTap: () => Get.to(() => SignupPage()),
                   ),
                   20.h,
                 ],

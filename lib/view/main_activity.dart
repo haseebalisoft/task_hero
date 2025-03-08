@@ -1,7 +1,11 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/add_service_main_tab/add_sevice_screen.dart';
 import 'package:cocoon/view/home/home_view.dart';
 import 'package:cocoon/view/inbox/inbox.dart';
+import 'package:cocoon/view/new_module/home/home_view.dart';
+import 'package:cocoon/view/setting_view/setting_view.dart';
+import 'package:cocoon/view/statistics/main_statistics_screen.dart';
 
 class MainActivity extends StatelessWidget {
   const MainActivity({super.key});
@@ -121,11 +125,11 @@ class NavigationControllerGetx extends GetxController {
   final RxInt selectedIndex = 0.obs;
 
   final screens = [
-    const HomeView(),
-    Container(color: Colors.blue),
-    Container(color: Colors.yellow),
-    InboxView(),
-    Container(color: Colors.pink),
+    const NHomeView(),
+    const StatisticsScreen(),
+    const AddSeviceScreen(),
+    const InboxView(),
+    const SettingView()
   ];
 
   changeSelectedIndex(int index) {

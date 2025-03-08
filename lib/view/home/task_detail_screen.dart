@@ -38,7 +38,46 @@ class TaskDetailScreen extends StatelessWidget {
               bgColor: Colors.white,
             ),
             20.h,
-            LevelCard(),
+            const LevelCard(),
+            20.h,
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Location",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const Text(
+                    "29 Park Road, Central Park, London, UK",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF9E9E9E)),
+                  ),
+                  10.h,
+                  SvgPicture.asset("assets/icons/map.svg"),
+                  10.h,
+                ],
+              ),
+            ),
+            20.h,
           ],
         ),
       ),

@@ -107,7 +107,7 @@ class ContactOptionCard extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 25,
-              backgroundColor: Colors.blue.withOpacity(0.1),
+              backgroundColor: context.primary.withOpacity(0.1),
               child: SvgPicture.asset(icon),
             ),
             const SizedBox(width: 16),

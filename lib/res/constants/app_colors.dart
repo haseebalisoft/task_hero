@@ -15,7 +15,7 @@ class AppColors {
   static const Color aqua = Color(0xff26DBDC);
   static const Color deepSkyBlue = Color(0xff1787E7);
   static const Color black1 = Color(0xff212121);
-  static const Color p1 = Color(0xff007AFF);
+  static const Color p1 = Color(0xff642D91);
 
   static const Color orange = Color(0xffFF981F);
   static const Color yellow = Color(0xFFFACC15);

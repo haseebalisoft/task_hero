@@ -1,9 +1,12 @@
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/add_new_address/add_new_address.dart';
 import 'package:cocoon/view/add_profile_details/add_profile_details_view.dart';
 
 class SetLocationView extends StatefulWidget {
+  final bool fromSetting;
 
-  const SetLocationView({super.key});
+
+  const SetLocationView({this.fromSetting=false,super.key});
   @override
   State<SetLocationView> createState() => _SetLocationViewState();
 }
@@ -63,7 +66,7 @@ class _SetLocationViewState extends State<SetLocationView> {
                  textColor: Colors.black,
                ),
                30.h,
-               AppButton.primary(title: 'Save & continue',onPressed: ()=>Get.off(()=>AddProfileDetailsView()),),
+               AppButton.primary(title: 'Save & continue',onPressed: ()=>Get.off(()=>widget.fromSetting?AddNewAddress():AddProfileDetailsView()),),
                40.h,
              ],
            ).paddingSymmetric(horizontal: 20),
