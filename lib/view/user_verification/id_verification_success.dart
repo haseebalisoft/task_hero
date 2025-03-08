@@ -2,6 +2,7 @@ import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/user_verification/otp_code_verification_screen.dart';
 import 'package:cocoon/view/user_verification/widgets/custom_tag.dart';
+import 'package:flutter/widgets.dart';
 
 class IdVerificationSuccess extends StatefulWidget {
   const IdVerificationSuccess({super.key});

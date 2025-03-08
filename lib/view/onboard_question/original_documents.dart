@@ -15,7 +15,7 @@ class OriginalDocumentsView extends StatelessWidget {
         Text('(Required)',style: context.bodySmall,),
         20.h,
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
               color: context.secondary,
               borderRadius: BorderRadius.circular(10)
@@ -30,7 +30,7 @@ class OriginalDocumentsView extends StatelessWidget {
         ),
         30.h,
         Container(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16),
           color: context.cardColor,
           child:Column(
             children: [

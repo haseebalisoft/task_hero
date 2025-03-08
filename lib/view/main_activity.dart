@@ -1,9 +1,10 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/add_service_main_tab/add_sevice_screen.dart';
 import 'package:cocoon/view/home/home_view.dart';
 import 'package:cocoon/view/inbox/inbox.dart';
-import 'package:cocoon/view/Search/SearchView.dart';
-import 'package:cocoon/view/Cart/Cart.dart';
+import 'package:cocoon/view/setting_view/setting_view.dart';
+import 'package:cocoon/view/statistics/main_statistics_screen.dart';
 
 class MainActivity extends StatelessWidget {
   const MainActivity({super.key});
@@ -22,7 +23,7 @@ class MainActivity extends StatelessWidget {
             child: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
               unselectedItemColor: const Color(0xFF9E9E9E),
-              selectedItemColor: AppColors.purple,
+              selectedItemColor: AppColors.p1,
               elevation: 0,
               backgroundColor: Colors.white,
               selectedFontSize: 13,
@@ -45,30 +46,13 @@ class MainActivity extends StatelessWidget {
                     label: "Home"),
                 BottomNavigationBarItem(
                     icon: CustomTabImage(
-                      selectedIconPath: "assets/icons/SearchF.svg",
-                      unSelectedIconPath: "assets/icons/search.svg",
+                      selectedIconPath: "assets/icons/ss.svg",
+                      unSelectedIconPath: "assets/icons/ssu.svg",
                       isSelected:
                           navigationControllerGetx.selectedIndex.value == 1,
                     ),
-                    label: "Search"),
-               
+                    label: "Statistics"),
                 BottomNavigationBarItem(
-                    icon: CustomTabImage(
-                      selectedIconPath: "assets/icons/cu.svg",
-                      unSelectedIconPath: "assets/icons/cus.svg",
-                      isSelected:
-                          navigationControllerGetx.selectedIndex.value == 2,
-                    ),
-                    label: "Inbox"),
-                     BottomNavigationBarItem(
-                    icon: CustomTabImage(
-                      selectedIconPath: "assets/icons/cs.svg",
-                      unSelectedIconPath: "assets/icons/c.svg",
-                      isSelected:
-                          navigationControllerGetx.selectedIndex.value == 3,
-                    ),
-                    label: "Cart"),
-                    /* BottomNavigationBarItem(
                     icon: CustomTabImage(
                       selectedIconPath: "assets/icons/c.svg",
                       unSelectedIconPath: "assets/icons/c.svg",
@@ -77,7 +61,15 @@ class MainActivity extends StatelessWidget {
                       isSelected:
                           navigationControllerGetx.selectedIndex.value == 2,
                     ),
-                    label: ""),*/
+                    label: ""),
+                BottomNavigationBarItem(
+                    icon: CustomTabImage(
+                      selectedIconPath: "assets/icons/cs.svg",
+                      unSelectedIconPath: "assets/icons/cus.svg",
+                      isSelected:
+                          navigationControllerGetx.selectedIndex.value == 3,
+                    ),
+                    label: "Inbox"),
                 BottomNavigationBarItem(
                     icon: CustomTabImage(
                       selectedIconPath: "assets/icons/ps.svg",
@@ -133,10 +125,10 @@ class NavigationControllerGetx extends GetxController {
 
   final screens = [
     const HomeView(),
-     const SearchView(),
+    const StatisticsScreen(),
+    const AddSeviceScreen(),
     const InboxView(),
-   const CartScreen(),
-    Container(color: Colors.pink),
+    const SettingView()
   ];
 
   changeSelectedIndex(int index) {

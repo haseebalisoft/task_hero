@@ -2,6 +2,7 @@ import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/home/widgets/schedule_card.dart';
 import 'package:cocoon/view/home/widgets/task_card.dart';
+import 'package:flutter/material.dart';
 
 class ScheduledTaskScreen extends StatelessWidget {
   const ScheduledTaskScreen({super.key});
@@ -26,7 +27,7 @@ class ScheduledTaskScreen extends StatelessWidget {
           children: [
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Expanded(
                     child: ScheduleCard(
                         title: "Today", date: "Dec 16", isSelected: true)),

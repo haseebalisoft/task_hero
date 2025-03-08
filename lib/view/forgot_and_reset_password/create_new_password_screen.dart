@@ -26,7 +26,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset("assets/images/rpy.png"),
+              Image.asset("assets/images/ryp.png"),
               60.h,
               const Text(
                 "Create Your New Password",
@@ -72,7 +72,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                           description:
                               "Your profile is set up.You will be redirected to the Home page or add your service(s)",
                           onTap: () {
-                            Get.to(()=>const LoginPage());
+                            Get.to(()=>LoginPage());
                           },
                         );
                       },

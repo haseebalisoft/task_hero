@@ -1,6 +1,8 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
 import 'package:cocoon/view/user_verification/point_the_camera_screen.dart';
+import 'package:flutter/widgets.dart';
+import 'package:pinput/pinput.dart';
 
 class SetYourFingerprint extends StatelessWidget {
   const SetYourFingerprint({super.key});
@@ -57,12 +59,12 @@ class SetYourFingerprint extends StatelessWidget {
                   title: "Skip",
                   elevation: 0,
                   background: const Color(0xFFEFF6FF),
-                 foregroundColor: const Color.fromARGB(255, 125, 4, 224),
+                  textColor: AppColors.p1,
                 ),
                 AppButton.primary(
                   width: 135,
                   onPressed: () {
-                    Get.to(() => const CameraScanScreen());
+                    Get.to(() => CameraScanScreen());
                   },
                   title: "Continue",
                   elevation: 0,

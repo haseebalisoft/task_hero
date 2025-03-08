@@ -1,3 +1,4 @@
+
 import '../../../res/constants/imports.dart';
 import '../../../widgets/message_bubble.dart';
 
@@ -13,9 +14,9 @@ class ChatScreenAdmin extends StatelessWidget {
           Expanded(
               child: ListView.separated(
                   padding: EdgeInsets.all(20),
-                  itemBuilder: (context, index) =>
-                      MessageBubble(fromUser: index % 2 == 0 ? true : false),
+                  itemBuilder: (context, index) => MessageBubble(fromUser:index%2==0?true:false),
                   separatorBuilder: (context, index) => SizedBox(
+
                         height: 20,
                       ),
                   itemCount: 7)),
@@ -31,7 +32,8 @@ class ChatScreenAdmin extends StatelessWidget {
                   children: [
                     Expanded(
                         child: CustomTextField(
-                      suffixIcon: Assets.icons.camera,
+
+                          suffixIcon: Assets.icons.camera,
                       hintText: 'Write message...',
                       fillColor: context.extraLightGrey,
                       borderRadius: 30,
@@ -59,6 +61,8 @@ class ChatScreenAdmin extends StatelessWidget {
   }
 }
 
+
+
 class ChattAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ChattAppBar({
     super.key,
@@ -78,7 +82,7 @@ class ChattAppBar extends StatelessWidget implements PreferredSizeWidget {
               SizedBox(
                 width: 12,
               ),
-              Icon(Icons.arrow_back_sharp),
+                       Icon(Icons.arrow_back_sharp),
               SizedBox(
                 width: 12,
               ),
@@ -90,7 +94,7 @@ class ChattAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           SvgPicture.asset(Assets.icons.moreCircle)
         ],
-      ).paddingSymmetric(vertical: 20),
+      ).paddingSymmetric(vertical:  20),
     );
   }
 

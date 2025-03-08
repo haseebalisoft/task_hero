@@ -21,7 +21,7 @@ class CameraScanScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.info_outline, color: Colors.white),
-            onPressed:()=>Get.to(()=>const HelpScreen()),
+            onPressed:()=>Get.to(()=>HelpScreen()),
           ),
         ],
       ),
@@ -75,7 +75,7 @@ class CameraScanScreen extends StatelessWidget {
                       Get.to(() => const HelpScreen());
                     },
                     backgroundColor: Colors.grey[300],
-                    child: SvgPicture.asset("assets/icons/image.svg",color: AppColors.purple,),
+                    child: SvgPicture.asset("assets/icons/image.svg"),
                   ),
                   SizedBox(
                     height: 80.0,
@@ -86,7 +86,7 @@ class CameraScanScreen extends StatelessWidget {
                         Get.to(() => const IdVerificationSuccess());
                       },
                       shape: const CircleBorder(),
-                      backgroundColor: const Color.fromARGB(255, 153, 0, 255),
+                      backgroundColor: AppColors.p1,
                       child: SvgPicture.asset("assets/icons/scan.svg"),
                     ),
                   ),
@@ -97,7 +97,7 @@ class CameraScanScreen extends StatelessWidget {
                     },
                     shape: const CircleBorder(),
                     backgroundColor: Colors.grey[300],
-                    child: SvgPicture.asset("assets/icons/folder.svg",color: AppColors.purple,),
+                    child: SvgPicture.asset("assets/icons/folder.svg"),
                   ),
                 ],
               ),

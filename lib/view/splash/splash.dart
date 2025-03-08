@@ -1,6 +1,7 @@
 
 import 'package:cocoon/view/splash/splash_controller.dart';
 
+import '../../gen/assets.gen.dart';
 import '../../res/constants/imports.dart';
 
 class SplashPage extends StatelessWidget {

@@ -17,8 +17,8 @@ class InboxView extends StatelessWidget {
           appBar: AppBar(title: Text('Inbox',style: context.titleSmall!.copyWith(color: context.primary),),),
           body: Column(
             children: [
-              const SizedBox(height: 20),
-              CustomTextField(hintText: 'Search',prefixIcon: Assets.icons.search,fillColor: const Color(0xffF5F5F5),),
+              SizedBox(height: 20),
+              CustomTextField(hintText: 'Search',prefixIcon: Assets.icons.search,fillColor: Color(0xffF5F5F5),),
               20.h,
               Row(
                 children: controller.status.asMap().entries.map((e) => Row(
@@ -26,7 +26,7 @@ class InboxView extends StatelessWidget {
                     InkWell(
                       onTap:()=>controller.setStatusValue(e.value),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                         decoration: BoxDecoration(
                             color:e.value==controller.selectedValue? context.primary:Colors.transparent,
                             borderRadius: BorderRadius.circular(15),
@@ -36,15 +36,15 @@ class InboxView extends StatelessWidget {
 
                       ),
                     ),
-                    const SizedBox(width: 10,)
+                    SizedBox(width: 10,)
                   ],
                 ),).toList() ,
               ),
               Expanded(
                 child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20),
                     color: context.cardColor,
-                    child:ListView.separated(itemBuilder: (context, index) =>  const InboxUserWidget(), separatorBuilder: (context, index) => const SizedBox(height: 20), itemCount: 4)
+                    child:ListView.separated(itemBuilder: (context, index) =>  InboxUserWidget(), separatorBuilder: (context, index) => SizedBox(height: 20), itemCount: 4)
                 ),
               )
 
@@ -69,18 +69,18 @@ class InboxUserWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ()=>Get.to(()=>const ChatScreenAdmin()),
+      onTap: ()=>Get.to(()=>ChatScreenAdmin()),
       child: Card(
 
         child: Padding(
-          padding: const EdgeInsets.all(5),
+          padding: EdgeInsets.all(5),
           child: Row(
             children: [
              // Assets.icons.point.svg(),
               ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Assets.images.personc.image(height: 60,width: 60)),
-              const SizedBox(width: 15),
+              SizedBox(width: 15),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,7 +93,7 @@ class InboxUserWidget extends StatelessWidget {
                         Text('2:53',style: context.bodyMedium,),
                       ],
                     ),
-                    const SizedBox(height: 5,),
+                    SizedBox(height: 5,),
                     Row(
                       children: [
                         Expanded(
@@ -102,7 +102,7 @@ class InboxUserWidget extends StatelessWidget {
                               child: Text('I can help with your task',style: context.bodyMedium,)),
                         ),
                         Container(
-                          padding: const EdgeInsets.all(4),
+                          padding: EdgeInsets.all(4),
                           height: 25,
                           width: 25,
                           decoration: BoxDecoration(

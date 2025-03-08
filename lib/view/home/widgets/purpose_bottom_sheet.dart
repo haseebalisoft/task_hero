@@ -1,8 +1,10 @@
 import 'package:cocoon/res/constants/app_colors.dart';
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:cocoon/view/home/offer_screen.dart';
+import 'package:cocoon/view/home/widgets/done_dialog.dart';
 
 class PurposeBottomSheet extends StatelessWidget {
-  const PurposeBottomSheet({super.key, required this.onTap});
+  const PurposeBottomSheet({Key? key, required this.onTap}) : super(key: key);
   final VoidCallback onTap;
 
   @override

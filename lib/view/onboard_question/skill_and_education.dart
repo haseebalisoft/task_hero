@@ -15,7 +15,7 @@ class SkillAndEducationView extends StatelessWidget {
         Text('(Private)',style: context.bodySmall,),
         20.h,
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
               color: context.secondary,
               borderRadius: BorderRadius.circular(10)

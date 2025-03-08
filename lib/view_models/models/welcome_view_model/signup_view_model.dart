@@ -1,37 +1,38 @@
+import 'dart:convert';
 import 'dart:io';
-import 'package:get/get.dart';
+
+import 'package:cocoon/res/constants/imports.dart';
+
 import '../../../utils/mixins/image_picker_mixin.dart';
 import '../../../widgets/image_option.dart';
 
-class SignUpViewModel extends GetxController with ImagePickerMixin {
+class SignUpViewModel extends GetxController with
+    ImagePickerMixin{
+  var base64Image;
   File? imgFile;
-  String? selectedGender;
-  String? country;
-  DateTime? dateOfBirth;
+  String? imgUrl;
+  TextEditingController passwordController=TextEditingController();
 
-  // Define the gender items as a list of strings
-  final List<String> genderItems = ['Male', 'Female'];
 
   void setImageFile() async {
     bool? isCamera = await ImageOption.show(Get.context!);
     if (isCamera != null) {
       imgFile = await pickImage(isCamera: isCamera);
       update();
+      if (imgFile != null) {
+        print('${imgFile!.path}         OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO');
+
+        // Read the file as bytes
+      //  var imageBytes = await imgFile!.readAsBytes();
+
+        // // Encode the bytes to base64
+        // base64Image = base64Encode(imageBytes);
+        // print(base64Image);
+
+        // Upload the file
+
+      }
     }
   }
 
-  void setGender(String? gender) {
-    selectedGender = gender;
-    update(); // Notify listeners
-  }
-
-  void setCountry(String? newCountry) {
-    country = newCountry;
-    update(); // Notify listeners
-  }
-
-  void setDateOfBirth(DateTime newDateOfBirth) {
-    dateOfBirth = newDateOfBirth;
-    update(); // Notify listeners
-  }
 }

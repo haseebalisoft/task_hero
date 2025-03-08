@@ -1,4 +1,5 @@
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:flutter/material.dart';
 
 class HomeCardHorizontal extends StatelessWidget {
   const HomeCardHorizontal(

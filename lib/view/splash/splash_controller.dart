@@ -24,7 +24,7 @@ class SplashController extends GetxController with LocalStorageMixin {
       //   Get.off(() => LoginPage());
       // }
 
-      Get.to(()=>const WelcomeView());
+      Get.to(()=>WelcomeView());
     });
     super.onReady();
   }

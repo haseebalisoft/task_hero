@@ -1,4 +1,5 @@
 import 'package:cocoon/res/constants/imports.dart';
+import 'package:flutter/material.dart';
 
 class CustomRadioButton extends StatelessWidget {
 
@@ -9,7 +10,8 @@ class CustomRadioButton extends StatelessWidget {
   final Function(String) onChange;
 
   const CustomRadioButton(
-      {super.key, this.withBorder=true, required this.value, required this.onChange, this.selectedValue});
+      {Key? key, this.withBorder=true, required this.value, required this.onChange, this.selectedValue})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,12 @@ class CustomRadioButton extends StatelessWidget {
               context.secondary,
               const Color(0xff5487E0),
               context.secondary
-            ])):const BoxDecoration(),
+            ])):BoxDecoration(),
 
         child: ColoredBox(
           color: context.secondary,
           child: Container(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
